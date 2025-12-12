@@ -755,6 +755,7 @@ function OrionLib:MakeWindow(WindowConfig)
 			Size = UDim2.new(1, -150, 1, -50),
 			Position = UDim2.new(0, 150, 0, 50),
 			Parent = MainWindow,
+            ScrollBarThickness = 0,
 			Visible = false,
 			Name = "ItemContainer"
 		}), {
