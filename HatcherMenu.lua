@@ -599,12 +599,16 @@ function OrionLib:MakeWindow(WindowConfig)
 		Position = UDim2.new(0, 0, 1, -1)
 	}), "Stroke")
 
-	local MainWindow = AddThemeObject(SetChildren(SetProps(MakeElement("Frame", Color3.fromRGB(255, 255, 255), 0, 10), {
-		Parent = Orion,
-		Position = UDim2.new(0.5, -307, 0.5, -172),
-		Size = UDim2.new(0, 615, 0, 344),
-		ClipsDescendants = true
-	}), {
+    local MainWindow = AddThemeObject(SetChildren(SetProps(
+            getgenv().RoundMainBackground 
+                and MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 10) or MakeElement("Frame", Color3.fromRGB(255, 255, 255)),
+            {
+                Parent = Orion,
+                Position = UDim2.new(0.5, -307, 0.5, -172),
+                Size = UDim2.new(0, 615, 0, 344),
+                ClipsDescendants = true
+            }
+        ), {
 		--SetProps(MakeElement("Image", "rbxassetid://3523728077"), {
 		--	AnchorPoint = Vector2.new(0.5, 0.5),
 		--	Position = UDim2.new(0.5, 0, 0.5, 0),
